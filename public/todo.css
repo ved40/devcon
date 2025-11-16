@@ -1,9 +1,31 @@
+/*nav*/
+.navbar {
+    /* height: 5rem; */
+    padding: 0.85rem;
+    background-color: white;
+    margin-bottom: 0.5rem;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
 .form-div {
-    border: 2px solid black;
-    height: 90vh;
+
+    padding: 1rem;
 }
 
 .div-showTasks {
-    border: 2px solid black;
-    height: 90vh;
+    padding: 1rem;
+}
+
+.task-list {
+    border: 1px solid black;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+li {
+    text-decoration: none;
 }

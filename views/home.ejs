@@ -1,15 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Campus Companion</title>
+
+    <link rel="stylesheet" href="home.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <h1>Coolege</h1>
 
+    <!-- Background Animation -->
+    <div class="animated-bg">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle-container">
+        <div class="theme-toggle" onclick="toggleTheme()">
+            <div class="theme-icon moon-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+            </div>
+            <div class="theme-icon sun-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 2v2m0 16v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M2 12h2m16 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-container">
+        <section class="hero-section">
+            <h1 class="hero-title">Campus Companion</h1>
+            <p class="hero-subtitle">Your academic journey starts here</p>
+        </section>
+
+        <section class="features-grid">
+            <!-- Todo -->
+            <div class="feature-card todo-card" onclick="window.location.href='/todo'">
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                    </svg>
+                </div>
+                <h3 class="feature-title">To Do</h3>
+                <p class="feature-description">Manage your tasks and assignments efficiently.</p>
+            </div>
+
+            <!-- Circular -->
+            <div class="feature-card circular-card" onclick="window.location.href='/circular'">
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 22c4.97 0 9-4.03 9-9s-4.03-9-9-9S3 8.03 3 13s4.03 9 9 9z" />
+                    </svg>
+                </div>
+                <h3 class="feature-title">Circulars</h3>
+                <p class="feature-description">View important notices and announcements.</p>
+            </div>
+
+            <!-- Events -->
+            <div class="feature-card events-card" onclick="window.location.href='/events'">
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" />
+                    </svg>
+                </div>
+                <h3 class="feature-title">Events</h3>
+                <p class="feature-description">Stay updated on upcoming college events.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function toggleTheme() {
+            const body = document.documentElement;
+            const current = body.getAttribute("data-theme");
+            body.setAttribute("data-theme", current === "dark" ? "light" : "dark");
+        }
+    </script>
 
 </body>
 
